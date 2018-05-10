@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>DOG API</h2>
+	<h4>One dog image a day, keep depression away</h4>
+	{% if img.mp4 %}
+		<video width="320" height="240" autoplay>
+			<source src="{{ img.url }}" type="video/mp4">
+		</video>
+	{% else %}
+		<img src="{{ img.url }}">
+	{% endif%}
+	<p><A HREF="javascript:history.go(0)">Why one, give me another dog !</A></p>
+{% endblock %}
